@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Ccompatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="Imagen/jpg" href="/img/NewSoft.jpg">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Control de Stock</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!--  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://www.fontspace.com/avengeance-font-f13706" rel="stylesheet"> -->  <!-- tipo de los ADVENGERS -->
+</head>
+
+<body>
+    <!-- Barra de navegacion o NavBar -->
+    <nav class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="./img/Control-de-stock.png" class="logo" alt="Imagen Logo">
+            <span class="main-name">Control Stock</span>
+        </a>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="#">Compra</a></li>
+            <li><a href="#">Venta</a></li>
+            <li><a href="#">Vales</a></li>
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#section-form">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- JavaScript donde se captura la parte de arriba de la pagina: header-->
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("nav");
+            header.classList.toggle("abajo", window.scrollY>0);
+        })
+    </script>    
+
+    <!-- Zona central de la primer pagina -->
+    <section id="zona1">
+        <div class="presentacion">
+            <h1>Control de Stock</h1>
+            <p class="renglon1">"El control de stock es la gestión eficiente de los productos almacenados. Permite conocer en tiempo real las existencias, optimizar los pedidos y evitar faltantes o excedentes.  Con esta herramienta, aseguramos una mejor atención al cliente y optimizamos nuestros recursos."</p>
+            <!-- <p class="renglon2">revolución digital que está</p>
+            <p class="renglon3">redefiniendo nuestro mundo.</p> -->
+        </div>
+    </section>
+
+
+    <!-- ********** FORMULARIO ********** -->
+    <section id="section-form">
+        <h2 class="titulo-form">FORMULARIO DE CONTACTO</h2>
+        <!-- <form action="./php/enviar.php" method="post"> -->
+        <form action="https://formsubmit.co/jle36@hotmail.com" method="POST" target="_blank">
+            <p class="anotate">¡Puedes hacernos llegar tu consulta a traves de <abbr title="attribute">este</abbr> formulario!</p>
+            <input class="nombre" type="text" name="Nombre" placeholder="Nombre" pattern="[a-zA-Z' ]*" required>
+            <input class="apellido" type="text" name="Apellido" placeholder="Apellido" pattern="[a-zA-Z' ]*" required>
+            <!-- <input type="tel" name="Telefono" pattern="\d{3}-\d{4}-\d{4}" placeholder="Telefono" required> --->
+            <input type="tel" name="Telefono" placeholder="Telefono" pattern="[a-zA-Z0-9' ]*" required>
+            <input class="email" type="email" name="email" placeholder="Correo" minlength="8" required>
+            <textarea name="mensaje" placeholder="Escriba aqui su mensaje" minlength="8" required></textarea>
+            <div class="aceptar">
+                <input type="checkbox" id="check-priv" required>
+                <label for="check-priv" class="text-priv">Acepto se envíen mis datos</label>
+            </div>
+            <input type="submit" id="boton" title="Clic para enviar el mail" value="ENVIAR">
+        </form>
+    </section>
+
+    <!-- ********* Seccion de footer ******** -->
+    <footer id="piedepagina">
+        <p class="contac">Contacto</p>
+        <div class="container">
+            <p class="mimail">
+                <a href="mailto:jle36@hotmail.com?subject=Consulta&body=Hola%2C%20quisiera%20más%20información%20sobre%20...">jle36@hotmail.com</a>
+                - Cel. +54-3487-616158
+            </p>
+            <div class="sociales">
+                <a href="https://www.linkedin.com/in/jose-luis-espinola-a036b7125/" target="_blank" title="Ir a LinkedIn">
+                    <img class="linkedin" src="./img/Linkedin.png" alt="Linkedin">
+                </a>
+                <a href="https://github.com/JoseLuisEspinola" target="_blank" title="Ir a GitHub">
+                    <img class="github" src="./img/github1.png" alt="Github">
+                </a>
+                <a href="https://www.facebook.com/joseluis.espinola1" target="_blank" title="Ir a Facebook">
+                    <img class="facebook" src="./img/facebook.png" alt="Facebook">
+                </a>
+                <!-- <a href="https://www.instagram.com/jle36/" target="_blank" title="Ir a Instagram">
+                    <img class="instagram" src="./img/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://x.com/jle36" target="_blank" title="Ir a Twitter">
+                    <img class="twitter" src="./img/Twitter.png" alt="Twitter">
+                </a> -->
+                <a href="https://api.whatsapp.com/send?phone=+543487616158&text=Hola, me gustaría realizar una página web... podrías contarme?" target="_blank" title="Ir a Whatsapp">
+                    <img class="whatsapp" src="./img/Whatsapp.png" alt="Whatsapp">
+                </a>
+            </div>
+        </div>
+
+        <!-- ******** Copyright ******** -->
+        <p class="copyright">&copy; <span id="copyright-year"></span> Control de Stock - Todos los derechos reservados - Espinola José Luis</p>
+        <script>
+            const currentYear = new Date().getFullYear();
+            document.getElementById('copyright-year').textContent = currentYear;
+        </script>
+    </footer>
+
+</body>
+</html>

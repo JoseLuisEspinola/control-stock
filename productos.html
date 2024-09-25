@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Ccompatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="Imagen/jpg" href="/img/NewSoft.jpg">
+    <link rel="stylesheet" href="./css/productos.css">
+    <title>Control de Stock</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!--  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://www.fontspace.com/avengeance-font-f13706" rel="stylesheet"> -->  <!-- tipo de los ADVENGERS -->
+</head>
+
+<body>
+    <!-- Barra de navegacion o NavBar -->
+    <nav class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="./img/Control-de-stock.png" class="logo" alt="Imagen Logo">
+            <span class="main-name">Control Stock</span>
+        </a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Compra</a></li>
+            <li><a href="#">Venta</a></li>
+            <li><a href="#">Vales</a></li>
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="index.html#section-form">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- JavaScript donde se captura la parte de arriba de la pagina: header-->
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("nav");
+            header.classList.toggle("abajo", window.scrollY>0);
+        })
+    </script>    
+
+    <!-- Zona central de la primer pagina -->
+    <section id="zona1">
+        <section id="section-form">
+            <h2 class="titulo-form">PRODUCTOS</h2>
+            <!-- <form action="./php/enviar.php" method="post"> -->
+            <form action="" method="POST" target="_blank">
+                <!-- <p class="anotate">¡Puedes hacernos llegar tu consulta a traves de <abbr title="attribute">este</abbr> formulario!</p> -->
+
+                <div class="form-group group1">
+                    <div class="group-producto">
+                        <label for="producto">Producto:</label>
+                        <input class="producto" id="producto" type="text" name="producto" placeholder="Nombre Producto" pattern="[a-zA-Z' ]*" required>
+                    </div>
+                    <div class="group-categoria">
+                        <label for="categoria">Categoria:</label>
+                        <input class="categoria" id="categoria" type="text" name="categoria" placeholder="Categoria Producto" pattern="[a-zA-Z' ]*" required>
+                    </div>
+                    <div class="group-cantidad">
+                        <label for="cantidad">Cantidad:</label>
+                        <input class="cantidad" id="cantidad" type="number" name="cantidad" placeholder="Cantidad" pattern="" required>
+                    </div>
+                </div>
+
+                <div class="form-group group2">
+                    <div class="group-precio1">
+                        <label for="precio1">Precio 1:</label>
+                        <input class="precio1" id="precio1" type="number" name="precio1" placeholder="Precio 1" pattern="" required>
+                    </div>
+                    <div class="group-precio2">
+                        <label for="precio2">Precio 2:</label>
+                        <input class="precio2" id="precio2" type="number" name="precio2" placeholder="Precio 2" pattern="" required>
+                    </div>
+                    <div class="group-precio3">
+                        <label for="precio3">Precio 3:</label>
+                        <input class="precio3" id="precio3" type="number" name="precio3" placeholder="Precio 3" pattern="" required>
+                    </div>
+                    <div class="group-proveedor">
+                        <label for="proveedor">Proveedor:</label>
+                        <input type="text" id="proveedor" name="proveedor" placeholder="Proveedor" pattern="[a-zA-Z0-9' ]*" required>
+                    </div>
+                </div>
+
+                <div class="form-group group3">
+                    <div class="group-observacion">
+                        <textarea name="observacion" placeholder="Observaciones" minlength="8" required></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-group group4">
+                    <div class="group-bottom">
+                        <input type="submit" id="boton" title="Clic para enviar el mail" value="GUARDAR">
+                        <input type="reset" id="boton" title="Clic limpia todas las entradas" value="BORRAR">
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section id="container-lista">
+            <h2>Lista de Productos</h2>
+            <div class="table-wrapper">
+                <table class="style-table" id="tabla-genero">
+                    <thead>
+                        <tr>
+                            <th>PRODUCTO</th>
+                            <th>CATEGORIA</th>
+                            <th>CANTIDAD</th>
+                            <th>PREC.1</th>
+                            <th>PREC.2</th>
+                            <th>PREC.3</th>
+                            <th>PROVEEDOR</th>
+                            <th>OBSERVACION</th>
+                            <th>ACCIONES</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Coca Cola x 1.5 lts descartable</td>
+                            <td>Bebidas</td>
+                            <td class="col-cen">12</td>
+                            <td class="col-num">2200</td>
+                            <td class="col-num">2300</td>
+                            <td class="col-num">2400</td>
+                            <td>Distribuidora Manrique</td>
+                            <td>A este proveedor se le paga de contado: efectivo, cheque, deposito bancario</td>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Coca Cola x 2.25 lts descartable</td>
+                            <td>Bebidas</td>
+                            <td class="col-cen">30</td>
+                            <td class="col-num">3200</td>
+                            <td class="col-num">3300</td>
+                            <td class="col-num">3400</td>
+                            <td>Distribuidora Manrique</td>
+                            <td>A este proveedor se le paga de contado: efectivo, cheque, deposito bancario</td>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Coca Cola x 3 lts descartable</td>
+                            <td>Bebidas</td>
+                            <td class="col-cen">10</td>
+                            <td class="col-num">4200</td>
+                            <td class="col-num">4300</td>
+                            <td class="col-num">4400</td>
+                            <td>Distribuidora Manrique</td>
+                            <td>A este proveedor se le paga de contado: efectivo, cheque, deposito bancario</td>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Sidra Tunuyan x 900cc</td>
+                            <td>Bebidas</td>
+                            <td class="col-cen">40</td>
+                            <td class="col-num">1800</td>
+                            <td class="col-num">2000</td>
+                            <td class="col-num">2180</td>
+                            <td>Distribuidora Pepito</td>
+                            <td>A este proveedor se le paga a 15 días: contado, cheque, depósito bancario</td>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Vino tinto Uvita tetrabrick x 1 lt</td>
+                            <td>Bebidas</td>
+                            <td class="col-cen">30</td>
+                            <td class="col-num">1200</td>
+                            <td class="col-num">1400</td>
+                            <td class="col-num">1600</td>
+                            <td>Distribuidora José</td>
+                            <td>A este proveedor se le paga a 7 días: efectivo, cheque, deposito bancario</td>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Vino blanco Uvita tetrabrick x 1 lt</td>
+                            <td>Bebidas</td>
+                            <td class="col-cen">36</td>
+                            <td class="col-num">1210</td>
+                            <td class="col-num">1410</td>
+                            <td class="col-num">1610</td>
+                            <td>Distribuidora José</td>
+                            <td>A este proveedor se le paga a 7 días: efectivo, cheque, deposito bancario</td>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Vino rosado Uvita tetrabrick x 1 lt</td>
+                            <td>Bebidas</td>
+                            <td class="col-cen">20</td>
+                            <td class="col-num">1110</td>
+                            <td class="col-num">1310</td>
+                            <td class="col-num">1510</td>
+                            <td>Distribuidora José</td>
+                            <td>A este proveedor se le paga a 7 días: efectivo, cheque, deposito bancario</td>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Cerveza Quilmes x 900cc</td>
+                            <td>Bebidas</td>
+                            <td class="col-cen">60</td>
+                            <td class="col-num">1710</td>
+                            <td class="col-num">1910</td>
+                            <td class="col-num">2110</td>
+                            <td>Distribuidora Quilmes SA</td>
+                            <td>Con este proveedor hay cuenta corriente</td>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Cerveza lata x 400cc</td>
+                            <td>Bebidas</td>
+                            <td class="col-cen">56</td>
+                            <td class="col-num">1280</td>
+                            <td class="col-num">1480</td>
+                            <td class="col-num">1680</td>
+                            <td>Distribuidora Quilmes SA</td>
+                            <td>A este proveedor se le paga a 7 días: efectivo, cheque, deposito bancario</td>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Manaos pomelo x 2.25lts</td>
+                            <td>Bebidas</td>
+                            <td class="col-cen">60</td>
+                            <td class="col-num">1400</td>
+                            <td class="col-num">1500</td>
+                            <td class="col-num">1600</td>
+                            <td>Distribuidora Los Amigos</td>
+                            <td>A este proveedor se le paga de contado: efectivo, cheque, deposito bancario</td>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Manaos naranja x 2.25lts</td>
+                            <td>Bebidas</td>
+                            <td class="col-cen">48</td>
+                            <td class="col-num">1400</td>
+                            <td class="col-num">1500</td>
+                            <td class="col-num">1600</td>
+                            <td>Distribuidora Los Amigos</td>
+                            <td>A este proveedor se le paga de contado: efectivo, cheque, deposito bancario</td>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>   <!-- container-lista -->
+    </section>
+
+
+    <!-- ********** LISTA de Productos ********** -->
+
+
+
+    <!-- ********* Seccion de footer ******** -->
+    <footer id="piedepagina">
+        <p class="contac">Contacto</p>
+        <div class="container">
+            <p class="mimail">
+                <a href="mailto:jle36@hotmail.com?subject=Consulta&body=Hola%2C%20quisiera%20más%20información%20sobre%20...">jle36@hotmail.com</a>
+                - Cel. +54-3487-616158
+            </p>
+            <div class="sociales">
+                <a href="https://www.linkedin.com/in/jose-luis-espinola-a036b7125/" target="_blank" title="Ir a LinkedIn">
+                    <img class="linkedin" src="./img/Linkedin.png" alt="Linkedin">
+                </a>
+                <a href="https://github.com/JoseLuisEspinola" target="_blank" title="Ir a GitHub">
+                    <img class="github" src="./img/github1.png" alt="Github">
+                </a>
+                <a href="https://www.facebook.com/joseluis.espinola1" target="_blank" title="Ir a Facebook">
+                    <img class="facebook" src="./img/facebook.png" alt="Facebook">
+                </a>
+                <!-- <a href="https://www.instagram.com/jle36/" target="_blank" title="Ir a Instagram">
+                    <img class="instagram" src="./img/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://x.com/jle36" target="_blank" title="Ir a Twitter">
+                    <img class="twitter" src="./img/Twitter.png" alt="Twitter">
+                </a> -->
+                <a href="https://api.whatsapp.com/send?phone=+543487616158&text=Hola, me gustaría realizar una página web... podrías contarme?" target="_blank" title="Ir a Whatsapp">
+                    <img class="whatsapp" src="./img/Whatsapp.png" alt="Whatsapp">
+                </a>
+            </div>
+        </div>
+
+        <!-- ******** Copyright ******** -->
+        <p class="copyright">&copy; <span id="copyright-year"></span> Control de Stock - Todos los derechos reservados - Espinola José Luis</p>
+        <script>
+            const currentYear = new Date().getFullYear();
+            document.getElementById('copyright-year').textContent = currentYear;
+        </script>
+    </footer>
+
+</body>
+</html>
