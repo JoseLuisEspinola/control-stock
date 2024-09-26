@@ -8,7 +8,8 @@
     --cs-color05: #015566;
     --cs-color06: #01333d;
 
-    --cs-color-copy: #fcb4a0;
+    /* --cs-color-copy: #fcb4a0; */
+    --cs-color-copy: #17b5d4;
 }
 
 * {
@@ -431,35 +432,6 @@ textarea {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*************************/
 /* ******* Footer ****** */
 footer {
@@ -548,7 +520,7 @@ footer .copyright {
 
     nav ul li {
         display: block;
-        margin: 40px 0;
+        margin: 20px 0;
         line-height: 50px;
     }
 
