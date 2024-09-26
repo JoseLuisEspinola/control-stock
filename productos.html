@@ -58,27 +58,49 @@
                         <label for="producto">Producto:</label>
                         <input class="producto" id="producto" type="text" name="producto" placeholder="Nombre Producto" pattern="[a-zA-Z' ]*" required>
                     </div>
+                    <div class="group-marca">
+                        <label for="marca">Marca:</label>
+                        <input class="marca" id="marca" type="text" name="marca" placeholder="Marca" pattern="[a-zA-Z' ]*">
+                    </div>
                     <div class="group-categoria">
-                        <label for="categoria">Categoria:</label>
+                        <label for="categoria">Categ:</label>
                         <input class="categoria" id="categoria" type="text" name="categoria" placeholder="Categoria Producto" pattern="[a-zA-Z' ]*" required>
                     </div>
-                    <div class="group-cantidad">
-                        <label for="cantidad">Cantidad:</label>
-                        <input class="cantidad" id="cantidad" type="number" name="cantidad" placeholder="Cantidad" pattern="" required>
+                    <div class="group-subcategoria">
+                        <label for="subcategoria">Sub-Cat:</label>
+                        <input class="categoria" id="categoria" type="text" name="categoria" placeholder="Categoria Producto" pattern="[a-zA-Z' ]*" required>
                     </div>
                 </div>
-
+                
                 <div class="form-group group2">
+                    <div class="group-cantidad">
+                        <label for="cantidad">Cant:</label>
+                        <input class="cantidad" id="cantidad" type="number" name="cantidad" placeholder="Cantidad" pattern="" required>
+                    </div>
+                    <div class="group-stockmin">
+                        <label for="stockmin">St.Min:</label>
+                        <input class="stockmin" id="stockmin" type="number" name="stockmin" placeholder="Stock Min" pattern="" required>
+                    </div>
+                    <div class="group-estado">
+                        <label for="estado">Estado:</label>
+                        <input class="estado" id="estado" type="text" name="estado" placeholder="Estado" pattern="" required>
+                        <!-- activo, inactivo, descontinuado -->
+                    </div>
+                    <div class="group-unidad">
+                        <label for="unidad">Unidad:</label>
+                        <input class="unidad" id="unidad" type="text" name="unidad" placeholder="Unidad" pattern="">
+                        <!-- KG, LT, etc -->
+                    </div>
                     <div class="group-precio1">
-                        <label for="precio1">Precio 1:</label>
+                        <label for="precio1">Prec.1:</label>
                         <input class="precio1" id="precio1" type="number" name="precio1" placeholder="Precio 1" pattern="" required>
                     </div>
                     <div class="group-precio2">
-                        <label for="precio2">Precio 2:</label>
+                        <label for="precio2">Prec.2:</label>
                         <input class="precio2" id="precio2" type="number" name="precio2" placeholder="Precio 2" pattern="" required>
                     </div>
                     <div class="group-precio3">
-                        <label for="precio3">Precio 3:</label>
+                        <label for="precio3">Prec.3:</label>
                         <input class="precio3" id="precio3" type="number" name="precio3" placeholder="Precio 3" pattern="" required>
                     </div>
                     <div class="group-proveedor">
@@ -109,13 +131,18 @@
                     <thead>
                         <tr>
                             <th>PRODUCTO</th>
-                            <th>CATEGORIA</th>
-                            <th>CANTIDAD</th>
+                            <th>MARCA</th>
+                            <th>CATEG</th>
+                            <th>S.CAT</th>
+                            <th>CANT.</th>
+                            <th>S.MIN</th>
+                            <th>ESTADO</th>
+                            <th>UNI</th>
                             <th>PREC.1</th>
                             <th>PREC.2</th>
                             <th>PREC.3</th>
                             <th>PROVEEDOR</th>
-                            <th>OBSERVACION</th>
+                            <th class="col-obs">OBSERVACION</th>
                             <th>ACCIONES</th>
                         </tr>
                     </thead>
@@ -123,125 +150,168 @@
                     <tbody>
                         <tr>
                             <td>Coca Cola x 1.5 lts descartable</td>
+                            <td>COCA COLA</td>
                             <td>Bebidas</td>
-                            <td class="col-cen">12</td>
+                            <td>Gaseosas</td>
+                            <td class="col-cen">112</td>
+                            <td class="col-cen">100</td>
+                            <td>Activo</td>
+                            <td>LT</td>
                             <td class="col-num">2200</td>
                             <td class="col-num">2300</td>
                             <td class="col-num">2400</td>
                             <td>Distribuidora Manrique</td>
-                            <td>A este proveedor se le paga de contado: efectivo, cheque, deposito bancario</td>
+                            <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</tdcla>
                             <td>Editar | Eliminar</td>
                         </tr>
                         <tr>
                             <td>Coca Cola x 2.25 lts descartable</td>
+                            <td>COCA COLA</td>
                             <td>Bebidas</td>
-                            <td class="col-cen">30</td>
+                            <td>Gaseosas</td>
+                            <td class="col-cen">212</td>
+                            <td class="col-cen">180</td>
+                            <td>Activo</td>
+                            <td>LT</td>
                             <td class="col-num">3200</td>
                             <td class="col-num">3300</td>
                             <td class="col-num">3400</td>
                             <td>Distribuidora Manrique</td>
-                            <td>A este proveedor se le paga de contado: efectivo, cheque, deposito bancario</td>
+                            <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</tdcla>
                             <td>Editar | Eliminar</td>
                         </tr>
                         <tr>
                             <td>Coca Cola x 3 lts descartable</td>
+                            <td>COCA COLA</td>
                             <td>Bebidas</td>
-                            <td class="col-cen">10</td>
+                            <td>Gaseosas</td>
+                            <td class="col-cen">86</td>
+                            <td class="col-cen">80</td>
+                            <td>Activo</td>
+                            <td>LT</td>
                             <td class="col-num">4200</td>
                             <td class="col-num">4300</td>
                             <td class="col-num">4400</td>
                             <td>Distribuidora Manrique</td>
-                            <td>A este proveedor se le paga de contado: efectivo, cheque, deposito bancario</td>
+                            <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</tdcla>
                             <td>Editar | Eliminar</td>
                         </tr>
                         <tr>
-                            <td>Sidra Tunuyan x 900cc</td>
+                            <td>Cerveza x 900 cc descartable</td>
+                            <td>QUILMES</td>
                             <td>Bebidas</td>
-                            <td class="col-cen">40</td>
+                            <td>Alcoholica</td>
+                            <td class="col-cen">160</td>
+                            <td class="col-cen">150</td>
+                            <td>Activo</td>
+                            <td>LT</td>
+                            <td class="col-num">3000</td>
+                            <td class="col-num">3100</td>
+                            <td class="col-num">3200</td>
+                            <td>Distribuidora Quilmes</td>
+                            <td class="col-obs">Pago cuenta corriente: efectivo, cheque, deposito bancario</tdcla>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Cerveza lata x 500 cc</td>
+                            <td>QUILMES</td>
+                            <td>Bebidas</td>
+                            <td>Alcoholica</td>
+                            <td class="col-cen">250</td>
+                            <td class="col-cen">220</td>
+                            <td>Activo</td>
+                            <td>LT</td>
+                            <td class="col-num">1600</td>
+                            <td class="col-num">1700</td>
                             <td class="col-num">1800</td>
-                            <td class="col-num">2000</td>
-                            <td class="col-num">2180</td>
-                            <td>Distribuidora Pepito</td>
-                            <td>A este proveedor se le paga a 15 días: contado, cheque, depósito bancario</td>
+                            <td>Distribuidora Quilmes</td>
+                            <td class="col-obs">Pago cuenta corriente: efectivo, cheque, deposito bancario</tdcla>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Coca Cola x 1.5 lts descartable</td>
+                            <td>COCA COLA</td>
+                            <td>Bebidas</td>
+                            <td>Gaseosas</td>
+                            <td class="col-cen">112</td>
+                            <td class="col-cen">100</td>
+                            <td>Activo</td>
+                            <td>LT</td>
+                            <td class="col-num">2200</td>
+                            <td class="col-num">2300</td>
+                            <td class="col-num">2400</td>
+                            <td>Distribuidora Manrique</td>
+                            <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</tdcla>
                             <td>Editar | Eliminar</td>
                         </tr>
                         <tr>
-                            <td>Vino tinto Uvita tetrabrick x 1 lt</td>
+                            <td>Coca Cola x 2.25 lts descartable</td>
+                            <td>COCA COLA</td>
                             <td>Bebidas</td>
-                            <td class="col-cen">30</td>
-                            <td class="col-num">1200</td>
-                            <td class="col-num">1400</td>
+                            <td>Gaseosas</td>
+                            <td class="col-cen">212</td>
+                            <td class="col-cen">180</td>
+                            <td>Activo</td>
+                            <td>LT</td>
+                            <td class="col-num">3200</td>
+                            <td class="col-num">3300</td>
+                            <td class="col-num">3400</td>
+                            <td>Distribuidora Manrique</td>
+                            <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</tdcla>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Coca Cola x 3 lts descartable</td>
+                            <td>COCA COLA</td>
+                            <td>Bebidas</td>
+                            <td>Gaseosas</td>
+                            <td class="col-cen">86</td>
+                            <td class="col-cen">80</td>
+                            <td>Activo</td>
+                            <td>LT</td>
+                            <td class="col-num">4200</td>
+                            <td class="col-num">4300</td>
+                            <td class="col-num">4400</td>
+                            <td>Distribuidora Manrique</td>
+                            <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</tdcla>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Cerveza x 900 cc descartable</td>
+                            <td>QUILMES</td>
+                            <td>Bebidas</td>
+                            <td>Alcoholica</td>
+                            <td class="col-cen">160</td>
+                            <td class="col-cen">150</td>
+                            <td>Activo</td>
+                            <td>LT</td>
+                            <td class="col-num">3000</td>
+                            <td class="col-num">3100</td>
+                            <td class="col-num">3200</td>
+                            <td>Distribuidora Quilmes</td>
+                            <td class="col-obs">Pago cuenta corriente: efectivo, cheque, deposito bancario</tdcla>
+                            <td>Editar | Eliminar</td>
+                        </tr>
+                        <tr>
+                            <td>Cerveza lata x 500 cc</td>
+                            <td>QUILMES</td>
+                            <td>Bebidas</td>
+                            <td>Alcoholica</td>
+                            <td class="col-cen">250</td>
+                            <td class="col-cen">220</td>
+                            <td>Activo</td>
+                            <td>LT</td>
                             <td class="col-num">1600</td>
-                            <td>Distribuidora José</td>
-                            <td>A este proveedor se le paga a 7 días: efectivo, cheque, deposito bancario</td>
+                            <td class="col-num">1700</td>
+                            <td class="col-num">1800</td>
+                            <td>Distribuidora Quilmes</td>
+                            <td class="col-obs">Pago cuenta corriente: efectivo, cheque, deposito bancario</tdcla>
                             <td>Editar | Eliminar</td>
                         </tr>
-                        <tr>
-                            <td>Vino blanco Uvita tetrabrick x 1 lt</td>
-                            <td>Bebidas</td>
-                            <td class="col-cen">36</td>
-                            <td class="col-num">1210</td>
-                            <td class="col-num">1410</td>
-                            <td class="col-num">1610</td>
-                            <td>Distribuidora José</td>
-                            <td>A este proveedor se le paga a 7 días: efectivo, cheque, deposito bancario</td>
-                            <td>Editar | Eliminar</td>
-                        </tr>
-                        <tr>
-                            <td>Vino rosado Uvita tetrabrick x 1 lt</td>
-                            <td>Bebidas</td>
-                            <td class="col-cen">20</td>
-                            <td class="col-num">1110</td>
-                            <td class="col-num">1310</td>
-                            <td class="col-num">1510</td>
-                            <td>Distribuidora José</td>
-                            <td>A este proveedor se le paga a 7 días: efectivo, cheque, deposito bancario</td>
-                            <td>Editar | Eliminar</td>
-                        </tr>
-                        <tr>
-                            <td>Cerveza Quilmes x 900cc</td>
-                            <td>Bebidas</td>
-                            <td class="col-cen">60</td>
-                            <td class="col-num">1710</td>
-                            <td class="col-num">1910</td>
-                            <td class="col-num">2110</td>
-                            <td>Distribuidora Quilmes SA</td>
-                            <td>Con este proveedor hay cuenta corriente</td>
-                            <td>Editar | Eliminar</td>
-                        </tr>
-                        <tr>
-                            <td>Cerveza lata x 400cc</td>
-                            <td>Bebidas</td>
-                            <td class="col-cen">56</td>
-                            <td class="col-num">1280</td>
-                            <td class="col-num">1480</td>
-                            <td class="col-num">1680</td>
-                            <td>Distribuidora Quilmes SA</td>
-                            <td>A este proveedor se le paga a 7 días: efectivo, cheque, deposito bancario</td>
-                            <td>Editar | Eliminar</td>
-                        </tr>
-                        <tr>
-                            <td>Manaos pomelo x 2.25lts</td>
-                            <td>Bebidas</td>
-                            <td class="col-cen">60</td>
-                            <td class="col-num">1400</td>
-                            <td class="col-num">1500</td>
-                            <td class="col-num">1600</td>
-                            <td>Distribuidora Los Amigos</td>
-                            <td>A este proveedor se le paga de contado: efectivo, cheque, deposito bancario</td>
-                            <td>Editar | Eliminar</td>
-                        </tr>
-                        <tr>
-                            <td>Manaos naranja x 2.25lts</td>
-                            <td>Bebidas</td>
-                            <td class="col-cen">48</td>
-                            <td class="col-num">1400</td>
-                            <td class="col-num">1500</td>
-                            <td class="col-num">1600</td>
-                            <td>Distribuidora Los Amigos</td>
-                            <td>A este proveedor se le paga de contado: efectivo, cheque, deposito bancario</td>
-                            <td>Editar | Eliminar</td>
-                        </tr>
+
+
                     </tbody>
                 </table>
             </div>

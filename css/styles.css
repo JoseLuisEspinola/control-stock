@@ -8,7 +8,8 @@
     --cs-color05: #015566;
     --cs-color06: #01333d;
 
-    --cs-color-copy: #fcb4a0;
+    /* --cs-color-copy: #fcb4a0; */
+    --cs-color-copy: #17b5d4;
 }
 
 * {
@@ -238,7 +239,7 @@ nav.abajo .main-name:hover {
     padding: 120px 3px 2px 3px;
     margin: 0;
     color: white;
-    text-shadow: #ff4081 2px 2px;
+    text-shadow: 3px 3px var(--cs-color01);
 }
 
 form {
