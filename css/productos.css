@@ -349,6 +349,8 @@ textarea {
     background-color: rgba(9, 72, 110, 0.8);
     border-radius: 5px;
     
+    overflow: hidden;
+
     /* border: 2px solid red; */
 }
 
@@ -371,7 +373,8 @@ textarea {
 
     margin: auto;
     border-collapse: collapse;
-    font-size: 16px;
+    
+    font-size: 14px;
 }
 
 .style-table thead {
