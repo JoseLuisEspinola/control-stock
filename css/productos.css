@@ -336,7 +336,7 @@ textarea {
 }
 
 
-/* **************************************** */
+/* ************************************************ */
 /* ************** LISTA - Table ******************* */
 #container-lista {
     position: absolute;
@@ -370,10 +370,10 @@ textarea {
 
 .style-table {
     width: 100%;
-
+    height: 100%;
     margin: auto;
     border-collapse: collapse;
-    
+
     font-size: 14px;
 }
 
@@ -385,12 +385,6 @@ textarea {
     text-align: left;
     z-index: 1; /* Asegura que esté por encima del contenido desplazable */
 }
-
-/* .style-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-} */
 
 .style-table th,
 .style-table td {
@@ -561,56 +555,41 @@ footer .copyright {
         max-width: 100%;
     }
 
-    #container-lista {
-        /* position: absolute; */
+ /*     #container-lista {
+        position: absolute;
         top: 51%;
-        width: 100%;
+    
+        width: 98%;
+        height: 40.8%;
+        margin: 10px;
         
-        height: 47.8%;
+        background-color: rgba(9, 72, 110, 0.8);
+        border-radius: 5px;
+        
+        overflow: hidden;
+    } */
+
+    #container-lista {
+        top: 56%;
+
+        width: 100%;
+        height: 42%;
         margin: 5px;
     }
     
     .table-wrapper {
-        max-height: 500px; /* Ajusta esta altura según sea necesario */
-        max-height: 210px;
-        overflow-y: auto;
-        overflow-x: none;
-    }
-    
-    #container-lista h2 {
-        text-align: center;
-        margin: 10px;
-        font-size: clamp(1rem, 2vw + 0.75rem, 1.8rem);
-        color: #ffffff;
+        max-height: 400px; /* Ajusta esta altura según sea necesario */
+        min-height: 210px;
     }
     
     .style-table {
-        width: 100%;
+        height: 100%;
         font-size: 12px;
-    }
-    
-    .style-table thead {
-        position: sticky;
-        top: 0;
-        background-color: var(--cs-color04);
-        color: #ffffff;
-        text-align: left;
-        z-index: 1; /* Asegura que esté por encima del contenido desplazable */
     }
     
     .style-table th,
     .style-table td {
         padding: 10px 10px;
-    }
-    
-    /* columnas numericas a la derecha*/
-    .col-num {
-        text-align: right;
-    }
-    
-    /* columnas numerica CANTIDAD al centro*/
-    .col-cen {
-        text-align: center;
     }
 }
 
@@ -639,12 +618,11 @@ footer .copyright {
         }
 
     .style-table {
-        width: 100%;
-        margin: auto;
-        border-collapse: collapse;
-        font-size: 12px;
+        height: 100%;
+        font-size: 11px;
     }
 
+    .col-pro,
     .col-obs {
         display: none;
     }
@@ -668,7 +646,10 @@ footer .copyright {
 /* ***** Media Query con 542px ***** */
 /*************************************/
 @media (max-width: 542px) {
-
+    .col-sca,
+    .col-uni {
+        display: none;
+    }
 }
 
 
