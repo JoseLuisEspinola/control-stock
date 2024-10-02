@@ -340,7 +340,7 @@ textarea {
 /* ************** LISTA - Table ******************* */
 #container-lista {
     position: absolute;
-    top: 54%;
+    top: 53%;
 
     width: 98%;
     height: 40.8%;
@@ -353,7 +353,7 @@ textarea {
 }
 
 .table-wrapper {
-    max-height: 400px; /* Ajusta esta altura según sea necesario */
+    max-height: 360px; /* Ajusta esta altura según sea necesario */
     min-height: 200px;
     overflow-y: auto;
     overflow-x: none;
