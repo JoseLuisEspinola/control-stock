@@ -353,7 +353,7 @@ textarea {
 }
 
 .table-wrapper {
-    max-height: 300px; /* Ajusta esta altura según sea necesario */
+    max-height: 400px; /* Ajusta esta altura según sea necesario */
     min-height: 200px;
     overflow-y: auto;
     overflow-x: none;
