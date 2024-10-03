@@ -407,6 +407,8 @@ textarea {
 .style-table th,
 .style-table td {
     padding: 12px 15px;
+
+    cursor: default;
 }
 
 /* renglones */
@@ -442,10 +444,34 @@ textarea {
 
 .style-table tbody tr:hover {
     color: #ffffff;
-    background-color: #525151;
+    background-color: #576c72;
     cursor: pointer;
 }
 
+/* Botones Editar - Eliminar */
+.btn {
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: 1px solid #575656;
+    color: #ffffff;
+}
+
+.btn-editar {
+    background-color: #919a9c;
+}
+
+.btn-editar:hover {
+    background-color: #b2bec0;
+}
+
+.btn-borrar {
+    background-color: rgb(187, 2, 2);
+}
+
+.btn-borrar:hover {
+    background-color: rgb(228, 3, 3);
+}
+/* Fin botones Editar - Eliminar */
 
 /*************************/
 /* ******* Footer ****** */
