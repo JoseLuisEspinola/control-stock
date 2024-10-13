@@ -223,9 +223,9 @@ hidden: Oculta el borde, pero mantiene el espacio que ocuparía. */
 
 .opc-proyectos a {
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding: 5px 12px;
     margin: 2px;
 
@@ -234,8 +234,8 @@ hidden: Oculta el borde, pero mantiene el espacio que ocuparía. */
 
 @keyframes multicolor {
     0%   {color: #fff;}
-    30%  {color: #5fe1f8;}
     50%  {color: #f8ee5f;}
+    30%  {color: #FF4081;}
     80%  {color: #fff;}
     100% {color: #fff;}
 }
@@ -589,7 +589,7 @@ footer .copyright {
     }
 
     .main-name {
-        font-size: 1.1;
+        font-size: 1.1rem;
     }
 
     /* ************************** */

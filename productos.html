@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Ccompatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="Imagen/jpg" href="/img/control-de-stock.png">
     <link rel="stylesheet" href="./css/productos.css">
@@ -34,7 +34,7 @@
     </nav>
 
     <!-- JavaScript donde se captura la parte de arriba de la pagina: header-->
-    <script type="text/javascript">
+    <script>
         window.addEventListener("scroll", function(){
             var header = document.querySelector("nav");
             header.classList.toggle("abajo", window.scrollY>0);
@@ -46,7 +46,7 @@
         <section id="section-form">
             <h2 class="titulo-form">PRODUCTOS</h2>
             <!-- <form action="./php/enviar.php" method="post"> -->
-            <form action="" method="POST" target="_blank">
+            <form action="https://formspree.io/f/mvgperpl" method="POST" target="_blank">
                 <!-- <p class="anotate">¡Puedes hacernos llegar tu consulta a traves de <abbr title="attribute">este</abbr> formulario!</p> -->
 
                 <div class="form-group group1">
@@ -64,18 +64,18 @@
                     </div>
                     <div class="group-subcategoria">
                         <label for="subcategoria">S-Cat:</label>
-                        <input class="categoria" id="categoria" type="text" name="categoria" placeholder="Sub-Categoría" pattern="[a-zA-Z' ]*" required>
+                        <input class="subcategoria" id="subcategoria" type="text" name="categoria" placeholder="Sub-Categoría" pattern="[a-zA-Z' ]*" required>
                     </div>
                 </div>
                 
                 <div class="form-group group2">
                     <div class="group-cantidad">
                         <label for="cantidad">Cant:</label>
-                        <input class="cantidad" id="cantidad" type="number" name="cantidad" placeholder="Cantidad" pattern="" required>
+                        <input class="cantidad" id="cantidad" type="number" name="cantidad" placeholder="Cantidad" min="0" max="1000000" required>
                     </div>
                     <div class="group-stockmin">
                         <label for="stockmin">St.Min:</label>
-                        <input class="stockmin" id="stockmin" type="number" name="stockmin" placeholder="Stock Min" pattern="" required>
+                        <input class="stockmin" id="stockmin" type="number" name="stockmin" placeholder="Stock Min" min="0" max="1000000" required>
                     </div>
                     <div class="group-estado">
                         <label for="estado">Estado:</label>
@@ -95,15 +95,15 @@
                     </div>
                     <div class="group-precio1">
                         <label for="precio1">Prec.1:</label>
-                        <input class="precio1" id="precio1" type="number" name="precio1" placeholder="Precio 1" pattern="" required>
+                        <input class="precio1" id="precio1" type="number" name="precio1" placeholder="Precio 1" min="0" max="100000000" required>
                     </div>
                     <div class="group-precio2">
                         <label for="precio2">Prec.2:</label>
-                        <input class="precio2" id="precio2" type="number" name="precio2" placeholder="Precio 2" pattern="" required>
+                        <input class="precio2" id="precio2" type="number" name="precio2" placeholder="Precio 2" min="0" max="100000000" required>
                     </div>
                     <div class="group-precio3">
                         <label for="precio3">Prec.3:</label>
-                        <input class="precio3" id="precio3" type="number" name="precio3" placeholder="Precio 3" pattern="" required>
+                        <input class="precio3" id="precio3" type="number" name="precio3" placeholder="Precio 3" min="0" max="100000000" required>
                     </div>
                     <div class="group-proveedor">
                         <label for="proveedor">Proveedor:</label>
@@ -119,8 +119,8 @@
                 
                 <div class="form-group group4">
                     <div class="group-bottom">
-                        <input type="submit" id="boton" title="Clic para enviar el mail" value="GUARDAR">
-                        <input type="reset" id="boton" title="Clic limpia todas las entradas" value="BORRAR">
+                        <input type="submit" class="boton" title="Clic para enviar el mail" value="GUARDAR">
+                        <input type="reset" class="boton" title="Clic limpia todas las entradas" value="BORRAR">
                     </div>
                 </div>
             </form>
@@ -166,7 +166,7 @@
                             <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</td>
                             <td>
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el producto?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -185,7 +185,7 @@
                             <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</td>
                             <td>
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el producto?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -204,7 +204,7 @@
                             <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</td>
                             <td>
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el producto?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -223,7 +223,7 @@
                             <td class="col-obs">Pago cuenta corriente: efectivo, cheque, deposito bancario</td>
                             <td>
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a  onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a  onclick="return confirm('¿Seguro desea borrar el producto?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -242,7 +242,7 @@
                             <td class="col-obs">Pago cuenta corriente: efectivo, cheque, deposito bancario</td>
                             <td>
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el producto?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
 
@@ -263,7 +263,7 @@
                             <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</td>
                             <td>
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el producto?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -282,7 +282,7 @@
                             <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</td>
                             <td>
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el producto?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -301,7 +301,7 @@
                             <td class="col-obs">Pago contado: efectivo, cheque, deposito bancario</td>
                             <td>
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el producto?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -319,8 +319,8 @@
                             <td class="col-pro">Distribuidora Quilmes</td>
                             <td class="col-obs">Pago cuenta corriente: efectivo, cheque, deposito bancario</td>
                             <td>
-                                <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a class="btn btn-editar" href="" title="Editar"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                                <a onclick="return confirm('¿Seguro desea borrar el producto?')" class="btn btn-borrar" href="" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
                         </tr>
                         <tr>
@@ -339,7 +339,7 @@
                             <td class="col-obs">Pago cuenta corriente: efectivo, cheque, deposito bancario</td>
                             <td>
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el producto?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
 
@@ -374,7 +374,7 @@
                 <a href="https://x.com/jle36" target="_blank" title="Ir a Twitter">
                     <img class="twitter" src="./img/Twitter.png" alt="Twitter">
                 </a> -->
-                <a href="https://api.whatsapp.com/send?phone=+543487616158&text=Hola, me gustaría realizar una página web... podrías contarme?" target="_blank" title="Ir a Whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=+543487616158&text=Hola%2C%20me%20gustaría%20realizar%20una%20página%20web...%20podrías%20contarme?" target="_blank" title="Ir a Whatsapp">
                     <img class="whatsapp" src="./img/Whatsapp.png" alt="Whatsapp">
                 </a>
             </div>

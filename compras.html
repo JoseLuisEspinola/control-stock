@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Ccompatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="Imagen/jpg" href="/img/control-de-stock.png">
     <link rel="stylesheet" href="./css/compras.css">
@@ -34,7 +34,7 @@
     </nav>
 
     <!-- JavaScript donde se captura la parte de arriba de la pagina: header-->
-    <script type="text/javascript">
+    <script>
         window.addEventListener("scroll", function(){
             var header = document.querySelector("nav");
             header.classList.toggle("abajo", window.scrollY>0);
@@ -46,13 +46,13 @@
         <section id="section-form">
             <h2 class="titulo-form">COMPRAS</h2>
             <!-- <form action="./php/enviar.php" method="post"> -->
-            <form action="" method="POST" target="_blank">
+            <form action="https://formspree.io/f/mvgperpl" method="POST" target="_blank">
                 <!-- <p class="anotate">¡Puedes hacernos llegar tu consulta a traves de <abbr title="attribute">este</abbr> formulario!</p> -->
 
                 <div class="form-group group1">
                     <div class="group-id_proveedor">
                         <label for="id_proveedor">Proveedor:</label>
-                        <input class="id_proveedor" id="id_proveedor" type="number" name="id_proveedor" placeholder="ID proveedor" pattern="[0-9 ]" required>
+                        <input class="id_proveedor" id="id_proveedor" type="number" name="id_proveedor" placeholder="ID proveedor" required>
                     </div>
                     <div class="group-proveedor">
                         <label for="proveedor">Proveedor:</label>
@@ -83,26 +83,26 @@
                     </div>
                     <div class="group-neto">
                         <label for="neto">Neto:</label>
-                        <input class="neto" id="neto" type="number" name="neto" placeholder="Importe Neto" pattern="^\d+(\.\d{1,2})?$" min="1" max="100000000" required>
+                        <input class="neto" id="neto" type="number" name="neto" placeholder="Importe Neto" min="1" max="100000000" required>
                     </div>
                     <div class="group-percepcion">
                         <label for="percepcion">Perc.IIBB:</label>
-                        <input class="percepcion" id="percepcion" type="number" name="percepcion" placeholder="Percepcion IIBB" pattern="^\d+(\.\d{1,2})?$">
+                        <input class="percepcion" id="percepcion" type="number" name="percepcion" placeholder="Percepcion IIBB" min="0" max="100000000">
                     </div>
                     <div class="group-tipoiva">
                         <label for="tipoiva">%IVA</label>
-                        <select name="tipoiva" class="tipoiva">
+                        <select name="tipoiva" id="tipoiva">
                             <option value="21">21%</option>
                             <option value="10.5">10.5%</option>
                         </select>
                     </div>
                     <div class="group-iva">
                         <label for="iva">I.V.A:</label>
-                        <input class="iva" id="iva" type="number" name="iva" placeholder="IVA" pattern="^\d+(\.\d{1,2})?$" disabled>
+                        <input class="iva" id="iva" type="number" name="iva" placeholder="IVA" disabled>
                     </div>
                     <div class="group-total">
                         <label for="total">TOTAL:</label>
-                        <input class="total" id="total" type="number" name="total" placeholder="Imp. TOTAL" pattern="^\d+(\.\d{1,2})?$" disabled>
+                        <input class="total" id="total" type="number" name="total" placeholder="Imp. TOTAL" disabled>
                     </div>
                 </div>
 
@@ -155,7 +155,7 @@
                             <td>Factura de pago a 5 dias, por esta vez como exepcion</td>
                             <td class="td-btn">
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el comprobante?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -169,7 +169,7 @@
                             <td>Factura de pago a 5 dias, por esta vez como exepcion</td>
                             <td class="td-btn">
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el comprobante?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -183,7 +183,7 @@
                             <td>Factura de pago a 5 dias, por esta vez como exepcion</td>
                             <td class="td-btn">
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el comprobante?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -197,7 +197,7 @@
                             <td>Factura de pago a 5 dias, por esta vez como exepcion</td>
                             <td class="td-btn">
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el comprobante?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -211,7 +211,7 @@
                             <td>Factura de pago a 5 dias, por esta vez como exepcion</td>
                             <td class="td-btn">
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el comprobante?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -225,7 +225,7 @@
                             <td>Factura de pago a 5 dias, por esta vez como exepcion</td>
                             <td class="td-btn">
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el comprobante?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -239,7 +239,7 @@
                             <td>Factura de pago a 5 dias, por esta vez como exepcion</td>
                             <td class="td-btn">
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el comprobante?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
                         <tr>
@@ -253,7 +253,7 @@
                             <td>Factura de pago a 5 dias, por esta vez como exepcion</td>
                             <td class="td-btn">
                                 <a class="btn btn-editar" href="">Editar</a>
-                                <a onclick="return confirm('¿Seguro desea borrar al empleado?')" class="btn btn-borrar" href="">Eliminar</a>
+                                <a onclick="return confirm('¿Seguro desea borrar el comprobante?')" class="btn btn-borrar" href="">Eliminar</a>
                             </td>
                         </tr>
             
@@ -288,7 +288,7 @@
                 <a href="https://x.com/jle36" target="_blank" title="Ir a Twitter">
                     <img class="twitter" src="./img/Twitter.png" alt="Twitter">
                 </a> -->
-                <a href="https://api.whatsapp.com/send?phone=+543487616158&text=Hola, me gustaría realizar una página web... podrías contarme?" target="_blank" title="Ir a Whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=+543487616158&text=Hola%2C%20me%20gustaría%20realizar%20una%20página%20web...%20podrías%20contarme?" target="_blank" title="Ir a Whatsapp">
                     <img class="whatsapp" src="./img/Whatsapp.png" alt="Whatsapp">
                 </a>
             </div>

@@ -204,10 +204,10 @@ nav.abajo .main-name:hover {
 /* **** Fotograma de LA INFORMATICA, presentacion h1 **** */
 @keyframes slide-in {
     from {
-        transform: translateX(60vw);
+        transform: translateX(70vw);
     }
     to {
-        transform: translateX(-66vw);
+        transform: translateX(-70vw);
     }
 }
 
@@ -215,7 +215,10 @@ nav.abajo .main-name:hover {
     width: 80%;
     height: 80%;
     color: white;
-    text-shadow: 1px 1px 14px var(--cs-color06), -1px -1px 14px var(--cs-color06);
+    /* text-shadow: 1px 1px 14px #01333d, -1px -1px 14px var(--cs-color06); */
+    text-shadow: 1px 1px 2px #000000, 
+                 0px 0px 25px #02758b,
+                 0px 0px 5px #01404d;
     font-weight: 600;
     font-size: 44px;
     margin: 10px auto;
@@ -316,7 +319,7 @@ textarea {
 #boton {
     cursor: pointer;
     font-size: clamp(1rem, 2vw + 0.25rem, 1.125rem);
-    text-align: center;  /* si el boton fuese type="button" quedaria en el centro, pero como es type="subnit" no queda en el centro */
+    text-align: center;
     color: #fff;
     background: transparent;
     border: 0.1px solid #15a4fa;
@@ -557,7 +560,7 @@ footer .copyright {
     }
 
     .main-name {
-        font-size: 1.1;
+        font-size: 1.1rem;
     }
 
     .presentacion h1 {

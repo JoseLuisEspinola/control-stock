@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Ccompatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="Imagen/jpg" href="/img/control-de-stock.png">
     <link rel="stylesheet" href="./css/styles.css">
@@ -34,7 +34,7 @@
     </nav>
 
     <!-- JavaScript donde se captura la parte de arriba de la pagina: header-->
-    <script type="text/javascript">
+    <script>
         window.addEventListener("scroll", function(){
             var header = document.querySelector("nav");
             header.classList.toggle("abajo", window.scrollY>0);
@@ -45,9 +45,12 @@
     <section id="zona1">
         <div class="presentacion">
             <h1>Control de Stock</h1>
-            <p class="renglon1">"El control de stock es la gestión eficiente de los productos almacenados. Permite conocer en tiempo real las existencias, optimizar los pedidos y evitar faltantes o excedentes.  Con esta herramienta, aseguramos una mejor atención al cliente y optimizamos nuestros recursos."</p>
-            <!-- <p class="renglon2">revolución digital que está</p>
-            <p class="renglon3">redefiniendo nuestro mundo.</p> -->
+            <p class="renglon1">"El control de stock es la gestión eficiente 
+                de los productos almacenados. Permite conocer en tiempo real 
+                las existencias, optimizar los pedidos y evitar faltantes o 
+                excedentes.  Con esta herramienta, aseguramos una mejor 
+                atención al cliente y optimizamos nuestros recursos."
+            </p>
         </div>
     </section>
 
@@ -60,7 +63,6 @@
             <p class="anotate">¡Puedes hacernos llegar tu consulta a traves de <abbr title="attribute">este</abbr> formulario!</p>
             <input class="nombre" type="text" name="Nombre" placeholder="Nombre" pattern="[a-zA-Z' ]*" required>
             <input class="apellido" type="text" name="Apellido" placeholder="Apellido" pattern="[a-zA-Z' ]*" required>
-            <!-- <input type="tel" name="Telefono" pattern="\d{3}-\d{4}-\d{4}" placeholder="Telefono" required> --->
             <input type="tel" name="Telefono" placeholder="Telefono" pattern="[a-zA-Z0-9' ]*" required>
             <input class="email" type="email" name="email" placeholder="Correo" minlength="8" required>
             <textarea name="mensaje" placeholder="Escriba aqui su mensaje" minlength="8" required></textarea>
@@ -69,6 +71,7 @@
                 <label for="check-priv" class="text-priv">Acepto se envíen mis datos</label>
             </div>
             <input type="submit" id="boton" title="Clic para enviar el mail" value="ENVIAR">
+
         </form>
     </section>
 
@@ -96,7 +99,7 @@
                 <a href="https://x.com/jle36" target="_blank" title="Ir a Twitter">
                     <img class="twitter" src="./img/Twitter.png" alt="Twitter">
                 </a> -->
-                <a href="https://api.whatsapp.com/send?phone=+543487616158&text=Hola, me gustaría realizar una página web... podrías contarme?" target="_blank" title="Ir a Whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=+543487616158&text=Hola%2C%20me%20gustaría%20realizar%20una%20página%20web...%20podrías%20contarme?" target="_blank" title="Ir a Whatsapp">
                     <img class="whatsapp" src="./img/Whatsapp.png" alt="Whatsapp">
                 </a>
             </div>
