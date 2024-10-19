@@ -316,20 +316,24 @@ textarea {
     font-size: clamp(0.938rem, 3vw, 1.125rem);
 }
 
-#boton {
+.botones {
+    display: flex;
+    gap: 1rem;
+}
+.btn {
     cursor: pointer;
-    font-size: clamp(1rem, 2vw + 0.25rem, 1.125rem);
+    font-size: clamp(0.8rem, 2vw + 0.25rem, 1.125rem);
     text-align: center;
     color: #fff;
     background: transparent;
-    border: 0.1px solid #15a4fa;
+    border: 1px solid #15a4fa;
     margin-bottom: 14px;
-    padding: 10px;
+    padding: 6px;
 
     transition: 0.4s;
 }
 
-#boton:hover {
+.btn:hover {
     color: #ffffff;
     background-color: #15a4fa;
 }
