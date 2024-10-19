@@ -213,7 +213,7 @@ hidden: Oculta el borde, pero mantiene el espacio que ocuparía. */
     color: #ff4081;
     font-size: 4rem;
     margin-bottom: 20px;
-    text-shadow: 6px 4px #070707;
+    text-shadow: 2px 2px #ffffff;
 }
 
 .opc-proyectos {
@@ -254,6 +254,7 @@ hidden: Oculta el borde, pero mantiene el espacio que ocuparía. */
     width: 40px;
     cursor: pointer;
 }
+
 
 /**********************************************/
 /* *********** Card de Alcoholicas** ******** */

@@ -230,7 +230,7 @@ nav.abajo .main-name:hover {
 /* Estilos para centrar el formulario en el medio del contenedor */
 #section-form {
     max-width: 100%;
-    background-image: url(/img/portada.png);
+    background-image: url(/img/fondo5.jpg);
     background-size: 100vw 100vh;
     background-attachment: fixed;   /* para que la imagen quede fija en el fondo */
     padding-bottom: 16px;
@@ -242,13 +242,13 @@ nav.abajo .main-name:hover {
     padding: 120px 3px 2px 3px;
     margin: 0;
     color: white;
-    text-shadow: 3px 3px var(--cs-color01);
+    text-shadow: 3px 3px rgb(214, 9, 9);
 }
 
 form {
     max-width: 40%;
     margin: auto;
-    background-color: rgba(9, 72, 110, 0.5);
+    background-color: rgba(9, 72, 110, 0.8);
     padding: 20px 20px 10px 20px;
     box-sizing: border-box;
     margin-top: 20px;
