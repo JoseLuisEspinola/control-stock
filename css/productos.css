@@ -335,20 +335,20 @@ textarea {
     color: #bea7bc;
 }
 
-#boton {
-    cursor: pointer;
+.boton {
     font-size: clamp(0.7rem, 2vw + 0.25rem, 1rem);
     text-align: center;  /* si el boton fuese type="button" quedaria en el centro, pero como es type="subnit" no queda en el centro */
     color: #fff;
-    background: transparent;
-    border: 1px solid #15a4fa;
+    border: 1px solid #0f71ad;
     margin: 0;
     padding: 0.25rem;   /* 4px */
+    cursor: pointer;
+    background-color: #0f71ad;
 
     transition: 0.4s;
 }
 
-#boton:hover {
+.boton:hover {
     color: #ffffff;
     background-color: #15a4fa;
 }

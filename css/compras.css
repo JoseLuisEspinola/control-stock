@@ -321,16 +321,6 @@ div.form-group.group3 {
     margin-left: 1rem;
 }
 
-.boton {
-    font-size: 14px;
-    padding: 2px;
-    margin: 0;
-}
-
-.boton:hover {
-    color: #ffffff;
-    background-color: #15a4fa;
-}
 
 label {
     color: white;
@@ -343,7 +333,7 @@ input, textarea {
     margin-bottom: 20px;
     padding: 8px;
     box-sizing: border-box;
-
+    
     font-size: clamp(0.7rem, 2vw + 0.25rem, 1rem);
     
     border-radius: 5px;
@@ -357,7 +347,7 @@ textarea {
     max-height: 60px;
     min-width: 100%;
     max-width: 100%;
-
+    
     /* box-sizing: border-box; */
     margin: 0;
 }
@@ -366,9 +356,21 @@ textarea {
     color: #bea7bc;
 }
 
+.boton {
+    font-size: 14px;
+    padding: 2px;
+    margin: 0;
+    background-color: #0f71ad;
+}
 
-/* ************************************************ */
-/* ************** LISTA - Table ******************* */
+.boton:hover {
+    color: #ffffff;
+    background-color: #15a4fa;
+}
+
+
+/* ********************************************* */
+/* ************** LISTA - Table **************** */
 #container-lista {
     position: absolute;
     top: 51%;
@@ -476,6 +478,7 @@ td.td-btn {
 .btn-editar {
     background-color: #919a9c;
     margin-right: 6px;
+    transition: 0.4s;
 }
 
 .btn-editar:hover {
@@ -483,11 +486,12 @@ td.td-btn {
 }
 
 .btn-borrar {
-    background-color: rgb(187, 2, 2);
+    background-color: #bb0202;
+    transition: 0.4s;
 }
 
 .btn-borrar:hover {
-    background-color: rgb(228, 3, 3);
+    background-color: #e40303;
 }
 /* Fin botones Editar - Eliminar */
 

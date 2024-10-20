@@ -215,7 +215,6 @@ nav.abajo .main-name:hover {
     width: 80%;
     height: 80%;
     color: white;
-    /* text-shadow: 1px 1px 14px #01333d, -1px -1px 14px var(--cs-color06); */
     text-shadow: 1px 1px 0px #000000, 
                  0px 0px 10px #02758b,
                  0px 0px 20px #02758b,
@@ -309,7 +308,7 @@ textarea {
 #check-priv {
     width: 18px;
     height: 18px;
-    margin-right: 10px;
+    margin: 4px 10px 16px 0px;
 }
 
 .text-priv {
@@ -329,7 +328,7 @@ textarea {
     background: transparent;
     border: 1px solid #15a4fa;
     margin-bottom: 14px;
-    padding: 6px;
+    padding: 4px;
 
     transition: 0.4s;
 }
