@@ -259,93 +259,6 @@ hidden: Oculta el borde, pero mantiene el espacio que ocuparía. */
 
 
 /**********************************************/
-/* *********** Card de Alcoholicas** ******** */
-#container-alcoholicas {
-    padding: 120px 0px 60px;
-    background-color: rgb(207, 242, 245);
-}
-
-#container-alcoholicas h2 {
-    font-size: clamp(1.4rem, 2vw + 1rem, 2rem);;
-    text-align: center;
-    padding-bottom: 20px;
-    color: black;
-}
-
-.card-container-al {
-    min-height: 100vh;
-    width: 80%;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    grid-auto-rows: 450px;
-    gap: 1.4rem;
-}
-
-.card-al {
-    display: grid;
-    grid-template-rows: 78% 10% 12%;
-    border-radius: 8px;
-    box-shadow: 5px 5px 6px #666;
-    background-color: #f0f0f0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-
-    transition: 0.5s;
-}
-
-.card-al:hover {
-    box-shadow: 6px 6px 8px #444;
-    scale: 1.02;
-    transition: 0.5s;
-}
-
-.card-img-al {
-    grid-row: 1/2; /* Imagen ocupa la primera fila */
-}
-
-.card-img-al img {
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.card-title-al {
-    grid-row: 2/3; /* Título ocupa la segunda fila */
-    padding: 0 16px;
-    display: flex;
-    align-items: center;
-}
-
-.card-title-al h3 {
-    /* font-size: 28px; */
-    font-size: clamp(1rem, 2vw + 0.25rem, 1.5rem);
-    margin: 0 auto;
-}
-
-.card-description-al {
-    grid-row: 3/4; /* Descripción ocupa la tercera fila */
-    padding: 0 16px;
-    margin: 6px 0 10px;
-    display: flex;
-    align-items: flex-start;
-    max-height: 100%; /* Asegurar que no crezca más allá del contenedor */
-}
-
-.card-description-al p {
-    color: #666;
-    font-size: clamp(0.8em, 2vw, 1.125em);
-    margin: 0 auto;
-    line-height: normal;
-}
-
-
-/**********************************************/
 /* *********** Card de Gaseosas ************* */
 #container-gaseosas {
     padding: 120px 0px 60px;
@@ -431,6 +344,95 @@ hidden: Oculta el borde, pero mantiene el espacio que ocuparía. */
     margin: 0 auto;
     line-height: normal;
 }
+
+
+
+/**********************************************/
+/* *********** Card de Alcoholicas** ******** */
+#container-alcoholicas {
+    padding: 120px 0px 60px;
+    background-color: rgb(207, 242, 245);
+}
+
+#container-alcoholicas h2 {
+    font-size: clamp(1.4rem, 2vw + 1rem, 2rem);;
+    text-align: center;
+    padding-bottom: 20px;
+    color: black;
+}
+
+.card-container-al {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    grid-auto-rows: 450px;
+    gap: 1.4rem;
+}
+
+.card-al {
+    display: grid;
+    grid-template-rows: 78% 10% 12%;
+    border-radius: 8px;
+    box-shadow: 5px 5px 6px #666;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+
+    transition: 0.5s;
+}
+
+.card-al:hover {
+    box-shadow: 6px 6px 8px #444;
+    scale: 1.02;
+    transition: 0.5s;
+}
+
+.card-img-al {
+    grid-row: 1/2; /* Imagen ocupa la primera fila */
+}
+
+.card-img-al img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-title-al {
+    grid-row: 2/3; /* Título ocupa la segunda fila */
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.card-title-al h3 {
+    /* font-size: 28px; */
+    font-size: clamp(1rem, 2vw + 0.25rem, 1.5rem);
+    margin: 0 auto;
+}
+
+.card-description-al {
+    grid-row: 3/4; /* Descripción ocupa la tercera fila */
+    padding: 0 16px;
+    margin: 6px 0 10px;
+    display: flex;
+    align-items: flex-start;
+    max-height: 100%; /* Asegurar que no crezca más allá del contenedor */
+}
+
+.card-description-al p {
+    color: #666;
+    font-size: clamp(0.8em, 2vw, 1.125em);
+    margin: 0 auto;
+    line-height: normal;
+}
+
 
 
 /*************************/
