@@ -229,6 +229,7 @@ hidden: Oculta el borde, pero mantiene el espacio que ocuparía. */
     /* text-transform: uppercase; */
     padding: 5px 12px;
     margin: 2px;
+    text-shadow: 2px 2px 4px rgb(97, 96, 96);
 
     animation: multicolor 8s linear infinite;
 }

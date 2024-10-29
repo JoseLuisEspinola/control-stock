@@ -1,0 +1,14 @@
+.resenas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 3 columnas, se adapta al tamaño de la pantalla */
+    gap: 20px; /* Espacio entre las reseñas */
+    padding: 20px; /* Espacio interior de la sección */
+}
+
+.resena {
+    background: #f9f9f9; /* Fondo claro */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espacio interno */
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
