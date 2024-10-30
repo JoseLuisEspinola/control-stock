@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="Imagen/jpg" href="/img/control-de-stock.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Control de Stock</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barra de navegacion o NavBar -->
+    <nav class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="./img/Control-de-stock.png" class="logo" alt="Imagen Logo">
+            <span class="main-name">Control Stock</span>
+        </a>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="compras.html">Compras</a></li>
+            <li><a href="#">Ventas</a></li>
+            <li><a href="spinner.html">Galeria</a></li>
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#section-form">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- JavaScript donde se captura la parte de arriba de la pagina: header-->
+    <script>
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("nav");
+            header.classList.toggle("abajo", window.scrollY>0);
+        })
+    </script>    
+
+    <!-- Zona central de la primer pagina -->
+    <section id="zona1">
+        <div class="presentacion">
+            <h1>Control de Stock</h1>
+            <p class="renglon1">"El control de stock es la gestión eficiente 
+                de los productos almacenados. Permite conocer en tiempo real 
+                las existencias, optimizar los pedidos y evitar faltantes o 
+                excedentes.  Con esta herramienta, aseguramos una mejor 
+                atención al cliente y optimizamos nuestros recursos."
+            </p>
+        </div>
+        <div class="resenas">
+            <a class="btn-resenas" href="resenas.html">Ver Reseñas</a>
+        </div>
+    </section>
+
+    <!-- # Términos y Condiciones
+
+Última actualización: [Fecha]
+
+Al utilizar esta aplicación de control de stock, aceptas cumplir con los siguientes términos y condiciones. Si no estás de acuerdo con estos términos, te recomendamos no utilizar esta aplicación.
+
+## 1. Aceptación de los Términos
+
+Al acceder y utilizar esta aplicación, aceptas estar sujeto a estos Términos y Condiciones y a nuestra Política de Privacidad. Si no estás de acuerdo con cualquiera de estos términos, debes dejar de usar la aplicación inmediatamente.
+
+## 2. Uso de la Aplicación
+
+Esta aplicación está diseñada para gestionar el control de stock, incluyendo la administración de clientes, proveedores, ventas, productos y compras. Te comprometes a utilizar la aplicación únicamente para fines legales y de acuerdo con las leyes aplicables.
+
+## 3. Propiedad Intelectual
+
+Todos los derechos de propiedad intelectual relacionados con la aplicación, incluyendo pero no limitado a, el diseño, desarrollo, contenido y funcionalidad, son propiedad de [Tu Nombre o Nombre de la Empresa]. Queda prohibida la reproducción, distribución o modificación del contenido sin el permiso expreso del propietario.
+
+## 4. Responsabilidad
+
+La aplicación se proporciona "tal cual" y "según disponibilidad". No garantizamos que la aplicación esté libre de errores o interrupciones. No seremos responsables de ningún daño directo, indirecto, incidental o consecuente que surja del uso o la imposibilidad de uso de la aplicación.
+
+## 5. Modificaciones
+
+Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Cualquier cambio será efectivo inmediatamente después de su publicación en esta página. Te recomendamos revisar periódicamente esta sección para estar al tanto de cualquier cambio.
+
+## 6. Ley Aplicable
+
+Estos Términos y Condiciones se regirán e interpretarán de acuerdo con las leyes de [Tu País o Estado]. Cualquier disputa que surja en relación con estos términos se resolverá en los tribunales competentes de [Tu Ciudad o Estado].
+
+## 7. Contacto
+
+Si tienes preguntas sobre estos Términos y Condiciones, por favor contacta a [Tu Correo Electrónico o Información de Contacto].
+
+---
+
+Al utilizar esta aplicación, confirmas que has leído, entendido y aceptas estos Términos y Condiciones.
+Personalización
+Reemplaza [Fecha], [Tu Nombre o Nombre de la Empresa], [Tu País o Estado], y [Tu Ciudad o Estado] con la información correspondiente.
+Asegúrate de ajustar cualquier sección según las características específicas de tu proyecto. -->

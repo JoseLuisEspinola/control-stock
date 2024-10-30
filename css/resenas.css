@@ -224,7 +224,7 @@ nav.abajo .main-name:hover {
     display: grid;
     grid-template-rows: 50% 50%;
     border-radius: 8px;
-    box-shadow: 5px 5px 10px #4f9686;
+    box-shadow: 5px 5px 10px #4f9b89;
     background-color: #f0f0f0;
     width: 100%;
     height: 100%;
@@ -257,6 +257,7 @@ nav.abajo .main-name:hover {
 .card-description-resenas {
     grid-row: 2/3; /* Descripción ocupa la tercera fila */
     padding: 0 16px;
+    font-style: italic;
     
     overflow-y: scroll;
    
