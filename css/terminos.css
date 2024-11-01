@@ -169,7 +169,7 @@ nav.abajo .main-name:hover {
 
 /**********************************************/
 /* **** Zona central de la primer pagina **** */ 
-#zona1 {
+.zona1 {
     background: url(../img/fondo2.jpg) no-repeat;   /* Es para que sea SOLO una imagen */
     background-size: cover;
     background-position: center center;
@@ -177,101 +177,68 @@ nav.abajo .main-name:hover {
 
     /* nuevo */
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
+    /* height: 320vh; */
+    height: auto;
     display: flex;
+    position: relative;
     justify-content: center;
-    /* align-items: center; */
-
+    align-items: center;
     overflow-x: hidden;
-    /* border: 2px solid red; */
 }
 
-#container-resenas {
-    width: 100%;
 
-    max-height: 88%;
-    min-height: 26%;
+/***********************************************/
+/* ***************** Terminos **************** */
+.container-politicas {
+    flex-direction: column;
+    /* max-width: 80%; */
+    padding: 130px 0 10px;
+    color: #ffffff;
+    /* text-shadow: 3px 3px  20px #000000; */
+    text-shadow: 1px 1px 0px #000000, 
+                 0px 0px 10px #02758b,
+                 0px 0px 20px #02758b,
+                 0px 0px 30px #02758b;
+    min-height: 100vh;
+}
 
-    margin-top: 120px;
+.h1-cabecera h1 {
+    color: #aef3ba;
+    font-size: clamp(1.5rem, 2vw + 0.75rem, 2.3rem);;
     text-align: center;
-    padding: 10px;
-
-    /* border: 2px solid blue; */
+    margin: 0 auto;
 }
 
-#container-resenas h2 {
-    color: #ff4081;
-    font-size: clamp(1.4rem, 2vw + 1rem, 2rem);
-    margin-bottom: 20px;
-    text-shadow: 2px 2px #ffffff;
-}
-
-.container-cards {
-    /* min-height: 100vh; */
-    width: 80%;
-    margin: 0 auto; 
-
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    grid-auto-rows: 200px;
-    gap: 1.4rem;
-
-    /* border: 2px solid green; */
-}
-
-.card-resenas {
-    display: grid;
-    grid-template-rows: 50% 50%;
-    border-radius: 8px;
-    box-shadow: 5px 5px 10px #4f9b89;
-    background-color: #f0f0f0;
-    width: 100%;
-    height: 100%;
-    /* object-fit: cover; */
+.container-uso {
+    /* max-width: 60%; */
+    max-width: clamp(60%, 90vw, 98%);  /* con ESTO solucione lo del alto sin medias query */
+    min-height: 95%;
+    max-height: 98%;
+    margin: 0px auto;
     padding: 16px;
     overflow: hidden;
-
-    transition: 0.5s;
 }
 
-.card-resenas:hover {
-    background-color: #faebd7;
-    box-shadow: 6px 6px 10px #b67b7b;
-    scale: 1.02;
-    transition: 0.5s;
+/* Solo el primer parrafo */
+.p-introduccion h2 {
+    margin: 10px 0 0;
 }
 
-.card-title-resenas {
-    grid-row: 1/2; /* Título ocupa la primer fila */
-    padding: 0 16px;
-    display: flex;
-    align-items: center;
+.cabecera h2 {
+    /* font-size: clamp(20px, 2vw + 0.75rem, 36px); */
+    font-size: clamp(1.25rem, 2vw + 0.75rem, 2.25rem);
+    margin: 30px 0 0;
+    text-align: center;
 }
 
-.card-title-resenas h3 {
-    font-size: clamp(1rem, 2vw + 0.25rem, 1.5rem);
-    margin: 0 auto;
-}
+.container-uso p {
+    font-size: clamp(16px, 1vw + 0.75rem, 22px);
 
-.card-description-resenas {
-    grid-row: 2/3; /* Descripción ocupa la tercera fila */
-    padding: 0 16px;
-    font-style: italic;
-    
-    overflow-y: scroll;
-   
-    display: flex;
-    align-items: flex-start;
-    text-align: justify;
-}
-
-.card-description-resenas p {
-    color: #666;
-    font-size: clamp(0.8em, 2vw, 1.125em);
-    margin: 0 auto;
-
-    line-height: normal;
+    /* font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; */
 }
 
 /* Boton flecha inicio */

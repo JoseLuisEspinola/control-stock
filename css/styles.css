@@ -226,19 +226,55 @@ nav.abajo .main-name:hover {
     margin: 10px auto 40px;
 }
 
-/* **** Boton reseñas **** */
+
+/* ********************************** */
+/* ********** Boton reseñas ********* */
 .btn-resenas {
-    display: inline-block;   /* Sin esto, el boton no se mueve. Renegue lindo!!! */
-    background-color: #2091f9;
-    border: 1px solid #2091f9;
-    justify-self: center;
-    color: #ffffff;
+    display: inline-block;
+    background: #0d94af;
+    color: #01333d;
     text-decoration: none;
     padding: 8px 20px;
+    border: 1px solid #01333d;
     border-radius: 16px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
     transition: 0.5s;
 
     animation: animacion_btn 1s infinite;
+}
+
+.btn-resenas:before,
+.btn-resenas:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    background-color: #01333d;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-resenas:after {
+    left: 100%;
+}
+
+.btn-resenas:hover {
+    color: #0d94af;
+}
+
+.btn-resenas:hover:before {
+    left: 0;
+}
+
+.btn-resenas:hover:after {
+    left: 50%;
 }
 
 /* keyframes boton amimacion */
@@ -262,13 +298,6 @@ nav.abajo .main-name:hover {
     90% {
       transform: rotate(2deg);
     }
-}
-
-.btn-resenas:hover {
-    /* background-color: #6ab4fa;  2091f9*/
-    background-color: transparent;
-    border: 1px solid #0000ff;
-    color: #0000ff
 }
 
 
@@ -385,6 +414,59 @@ textarea {
     background-color: #15a4fa;
 }
 
+/* ******************************** */
+/* ********** Sucursales ********** */
+.container-sucursales {
+    max-width: 100%;
+    height: auto;
+    color: #000000;
+    background-color:  #cfeff5;
+    background-image: url(/img/fondo-maps.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.titulo-sucursales {
+    text-align: center;
+    font-size: 2em;
+    padding: 120px 3px 2px 3px;
+    margin: 0;
+    color: #d60909;
+    text-shadow: 3px 3px var(--cs-color05);
+    /* color: rgb(62, 62, 62); */
+}
+
+.sucursales-maps {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+
+    margin: auto;
+    gap: 10px;
+    padding: 30px 0 60px;
+}
+
+.indiv-sucursal {
+    width: 100%;
+    /* width: 600px; */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: auto;
+    overflow: hidden;
+}
+
+.indiv-sucursal h3 {
+    font-size: 1.4rem;
+    /* color: #ff3c78; */
+    color: rgb(5, 36, 240);
+    padding: 4px;
+    margin: 0 auto 20px;
+    text-shadow: 0 0 10px #02252c,
+                 0 0 30px #01252c;
+}
+
 
 /*************************/
 /* ******* Footer ****** */
@@ -397,10 +479,13 @@ footer {
 
 p.contac {
     font-size: 1.5rem;
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     background-color: #333;
     padding-bottom: 10px;
     text-shadow: #2fcdcd 2px 2px;
+}
+
+footer .container {
+    margin-bottom: 8px;
 }
 
 .mimail {
@@ -408,7 +493,7 @@ p.contac {
     padding-bottom: 12px;
 }
 
- .mimail a {
+.mimail a {
     color: #ffffff;
 }
 
@@ -432,6 +517,11 @@ p.contac {
 .facebook:hover, .whatsapp:hover {
     /* background-color: #ffffff; */
     box-shadow: 1px 1px 14px 0 #abacaf, -1px -1px 14px 0 #abacaf;
+}
+
+a.terminos {
+    color: #ffe4c4;
+    font-size: clamp(0.625rem, 1vw + 0.25rem, 1rem);
 }
 
 footer .copyright {
@@ -526,6 +616,10 @@ footer .copyright {
     .main-name {
         font-size: 1.4rem;
     } 
+
+    .sucursales-maps {
+        width: 90%;
+    }
 }
 
 
@@ -573,6 +667,12 @@ footer .copyright {
 
     form {
         max-width: 60%;
+    }
+
+    .sucursales-maps {
+        max-width: 96%;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 }
 

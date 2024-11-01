@@ -199,17 +199,6 @@ nav.abajo .main-name:hover {
     box-shadow: 10px 10px 20px #2db5f5, -10px -10px 20px #000000;
 }
 
-/* solid: Crea un borde sólido (línea continua). Es el estilo más común.
-dotted: Genera un borde punteado, formado por una serie de puntos.
-dashed: Crea un borde rayado, con líneas cortas separadas por espacios.
-double: Genera un borde doble, compuesto por dos líneas sólidas.
-groove: Crea un borde que parece hundido en la superficie.
-ridge: Crea un borde que parece sobresalir de la superficie.
-inset: Crea un borde que parece hundido en el elemento.
-outset: Crea un borde que parece sobresalir del elemento.
-none: Elimina cualquier borde del elemento.
-hidden: Oculta el borde, pero mantiene el espacio que ocuparía. */
-
 .presentacion h1 {
     color: #ff4081;
     font-size: 4rem;
@@ -324,7 +313,6 @@ hidden: Oculta el borde, pero mantiene el espacio que ocuparía. */
 }
 
 .card-title-ga h3 {
-    /* font-size: 28px; */
     font-size: clamp(1rem, 2vw + 0.25rem, 1.5rem);
     margin: 0 auto;
 }
@@ -412,7 +400,6 @@ hidden: Oculta el borde, pero mantiene el espacio que ocuparía. */
 }
 
 .card-title-al h3 {
-    /* font-size: 28px; */
     font-size: clamp(1rem, 2vw + 0.25rem, 1.5rem);
     margin: 0 auto;
 }
@@ -446,10 +433,13 @@ footer {
 
 p.contac {
     font-size: 1.5rem;
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     background-color: #333;
     padding-bottom: 10px;
     text-shadow: #2fcdcd 2px 2px;
+}
+
+footer .container {
+    margin-bottom: 8px;
 }
 
 .mimail {
@@ -457,7 +447,7 @@ p.contac {
     padding-bottom: 12px;
 }
 
- .mimail a {
+.mimail a {
     color: #ffffff;
 }
 
@@ -481,6 +471,11 @@ p.contac {
 .facebook:hover, .whatsapp:hover {
     /* background-color: #ffffff; */
     box-shadow: 1px 1px 14px 0 #abacaf, -1px -1px 14px 0 #abacaf;
+}
+
+a.terminos {
+    color: #ffe4c4;
+    font-size: clamp(0.625rem, 1vw + 0.25rem, 1rem);
 }
 
 footer .copyright {

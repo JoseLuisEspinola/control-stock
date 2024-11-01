@@ -493,10 +493,13 @@ footer {
 
 p.contac {
     font-size: 1.5rem;
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     background-color: #333;
     padding-bottom: 10px;
     text-shadow: #2fcdcd 2px 2px;
+}
+
+footer .container {
+    margin-bottom: 8px;
 }
 
 .mimail {
@@ -504,7 +507,7 @@ p.contac {
     padding-bottom: 12px;
 }
 
- .mimail a {
+.mimail a {
     color: #ffffff;
 }
 
@@ -528,6 +531,11 @@ p.contac {
 .facebook:hover, .whatsapp:hover {
     /* background-color: #ffffff; */
     box-shadow: 1px 1px 14px 0 #abacaf, -1px -1px 14px 0 #abacaf;
+}
+
+a.terminos {
+    color: #ffe4c4;
+    font-size: clamp(0.625rem, 1vw + 0.25rem, 1rem);
 }
 
 footer .copyright {
