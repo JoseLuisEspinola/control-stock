@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="Imagen/jpg" href="/img/control-de-stock.png">
+    <link rel="stylesheet" href="/css/disenador.css">
+    <title>Creditos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barra de navegacion o NavBar -->
+    <nav class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="./img/Control-de-stock.png" class="logo" alt="Imagen Logo">
+            <span class="main-name">Control Stock</span>
+        </a>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-home" title="Inicio"></i></a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="compras.html">Compras</a></li>
+            <li><a href="#">Ventas</a></li>
+            <li><a href="spinner.html">Galeria</a></li>
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="index.html#section-form">Contacto</a></li>
+
+            <div class="container-user">
+                <a href="login.html"><i class="fa-solid fa-user" title="Usuario"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- JavaScript donde se captura la parte de arriba de la pagina: header-->
+    <script>
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("nav");
+            header.classList.toggle("abajo", window.scrollY>0);
+        })
+    </script>    
+
+    <!-- Zona central de la primer pagina -->
+    <section id="zona1">
+        <!-- Integrantes -->
+        <div class="caja">
+            <h1>CONTROL STOCK</h1>
+            <h2>Profesor: Carlos Arroyos Díaz</h2>
+            <ul class="lista-integrantes">
+                <li class="integrante">Diseñador por:</li>
+                <li class="integrante">Espinola J. Luis</li>
+            </ul>
+        </div>
+
+        <!-- <div class="presentacio -->
+        <div class="contanier-nombres">
+            <div class="nombre1">
+                DISEÑADOR
+            </div>
+            <div class="nombre2">
+                JOSE LUIS
+            </div>
+        </div>
+
+        <!-- Musica de fondo. Lo podría haber puesto en cualquier lugar. Lo puse SIN la opción de mostrar los controles -->
+        <audio id="background-music" src="/audio/musica-fondo.mp3" autoplay loop>
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+    </section>
+
+    <!-- JavaScript para establecer el volumen inicial -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var audio = document.getElementById('background-music');
+            audio.volume = 0.5; // Establecí el volumen al 50%
+        });
+    </script>    
+
+    <script src="https://kit.fontawesome.com/81581fb069.js"
+        crossorigin="anonymcus">
+    </script>
+</body>
+</html>
