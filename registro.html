@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="Imagen/jpg" href="/img/control-de-stock.png">
-    <link rel="stylesheet" href="/css/login.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="/css/registro.css">
+    <title>Registro</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -32,7 +32,7 @@
             <li><a href="index.html#section-form">Contacto</a></li>
 
             <div class="container-user">
-                <a href="#"><i class="fa-solid fa-user" title="Usuario"></i></a>
+                <a href="login.html"><i class="fa-solid fa-user" title="Usuario"></i></a>
                 <a href="#"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
             </div>
         </ul>
@@ -50,7 +50,12 @@
     <section id="zona1">
         <form action="" method="POST" id="form">
             <div class="form">
-                <h1>LOGIN</h1>
+                <h1>REGISTRO</h1>
+                <div class="grupo">
+                    <input type="text" name="nombre" id="nombre" required><span class="barra"></span>
+                    <label for="nombre" class="rotulo">Nombre</label>
+                </div>
+
                 <div class="grupo">
                     <input type="text" name="username" id="username" required><span class="barra"></span>
                     <label for="username" class="rotulo">Usuario</label>
@@ -60,9 +65,16 @@
                     <input type="password" name="password" id="password" required><span class="barra"></span>
                     <label for="password" class="rotulo">Password</label>
                 </div>
-                <button type="submit">Aceptar</button>
+
+                <div class="grupo">
+                    <input type="password2" name="password2" id="password2" required><span class="barra"></span>
+                    <label for="password2" class="rotulo">Repetir Password</label>
+                </div>
+
+                <button type="submit">Regístrate</button>
+
                 <div class="registrate">
-                    <p>Regístrate <a href="registro.html">Aqui</a></p>
+                    <p>Si estás registrado, entra <a href="login.html">Aquí</a></p>
                 </div>
             </div>
         </form>
