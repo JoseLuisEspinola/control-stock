@@ -116,6 +116,10 @@ nav ul li a {
     color: #020492;
 }
 
+nav.abajo .fa-home {
+    color: #0307fa
+}
+
 /* nuevo */
 li a:after {
     content: "";
@@ -351,7 +355,6 @@ nav.abajo .main-name:hover {
 }
 
 
-
 /**********************************************/
 /* *********** Card de Alcoholicas** ******** */
 #container-alcoholicas {
@@ -438,7 +441,6 @@ nav.abajo .main-name:hover {
 }
 
 
-
 /*************************/
 /* ******* Footer ****** */
 footer {
@@ -502,7 +504,6 @@ footer .copyright {
 }
 
 
-
 /*************************************/
 /* ***** Media Query con 1368px ***** */
 @media (max-width: 1368px) {
@@ -523,7 +524,7 @@ footer .copyright {
     nav ul {
         position: fixed;
         width: 100%;
-        height: 76vh;
+        height: 80vh;
         background: rgba(44, 62, 80, 0.9);
         top: 90px;
         left: -100%;
@@ -531,11 +532,13 @@ footer .copyright {
         text-align: center;
         transition: all .5s;
         overflow-y: auto;
+
+        display: block;
     }
 
     nav ul li {
         display: block;
-        margin: 20px 0;
+        margin: 14px 0;
         line-height: 50px;
     }
 
