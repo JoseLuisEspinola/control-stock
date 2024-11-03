@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="Imagen/jpg" href="/img/control-de-stock.png">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Control de Stock</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -22,17 +22,17 @@
             <span class="main-name">Control Stock</span>
         </a>
         <ul>
-            <li><a href="#"><i class="fa-solid fa-home" title="Inicio"></i></a></li>
+            <li><a href="index.html"><i class="fa-solid fa-home" title="Inicio"></i></a></li>
             <li><a href="productos.html">Productos</a></li>
             <li><a href="compras.html">Compras</a></li>
             <li><a href="#">Ventas</a></li>
             <li><a href="spinner.html">Galeria</a></li>
             <li><a href="#">Proveedores</a></li>
             <li><a href="#">Clientes</a></li>
-            <li><a href="#section-form">Contacto</a></li>
+            <li><a href="index.html#section-form">Contacto</a></li>
 
             <div class="container-user">
-                <a href="login.html"><i class="fa-solid fa-user" title="Usuario"></i></a>
+                <a href="#"><i class="fa-solid fa-user" title="Usuario"></i></a>
                 <a href="#"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
             </div>
         </ul>
@@ -46,59 +46,26 @@
         })
     </script>    
 
-    <!-- Zona central de la primer pagina -->
+    <!-- Zona central de la primer pagina con el formulario -->
     <section id="zona1">
-        <div class="presentacion">
-            <h1>Control de Stock</h1>
-            <p class="renglon1">"El control de stock es la gestión eficiente 
-                de los productos almacenados. Permite conocer en tiempo real 
-                las existencias, optimizar los pedidos y evitar faltantes o 
-                excedentes.  Con esta herramienta, aseguramos una mejor 
-                atención al cliente y optimizamos nuestros recursos."
-            </p>
-        </div>
-        <div class="resenas">
-            <a class="btn-resenas" href="resenas.html">Ver Reseñas</a>
-        </div>
-    </section>
-
-    <!-- ********** FORMULARIO ********** -->
-    <section id="section-form">
-        <h2 class="titulo-form">FORMULARIO DE CONTACTO</h2>
-        <!-- <form action="./php/enviar.php" method="post"> -->
-        <form action="https://formspree.io/f/mvgperpl" method="POST" target="_blank">
-            <p class="anotate">¡Puedes hacernos llegar tu consulta a traves de <abbr title="attribute">este</abbr> formulario!</p>
-            <input class="nombre" type="text" name="Nombre" placeholder="Nombre" pattern="[a-zA-Z' ]*" required>
-            <input class="apellido" type="text" name="Apellido" placeholder="Apellido" pattern="[a-zA-Z' ]*" required>
-            <input type="tel" name="Telefono" placeholder="Telefono" pattern="[a-zA-Z0-9' ]*" required>
-            <input class="email" type="email" name="email" placeholder="Correo" minlength="8" required>
-            <textarea name="mensaje" placeholder="Escriba aqui su mensaje" minlength="8" required></textarea>
-            <div class="aceptar">
-                <input type="checkbox" id="check-priv" required>
-                <label for="check-priv" class="text-priv">Acepto se envíen mis datos</label>
+        <form action="" method="POST" id="form">
+            <div class="form">
+                <h1>LOGIN</h1>
+                <div class="grupo">
+                    <input type="text" name="username" id="username" required><span class="barra"></span>
+                    <label for="username">Usuario</label>
+                </div>
+                
+                <div class="grupo">
+                    <input type="password" name="password" id="password" required><span class="barra"></span>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit">Aceptar</button>
             </div>
-            <div class="botones">
-                <input type="submit" class="btn btn-grabar" title="Clic para enviar el mail" value="ENVIAR">
-                <input type="reset" class="btn btn-limpiar" title="Clic para limpiar" value="LIMPIAR">
-            </div>
-
         </form>
     </section>
 
-    <section class="container-sucursales">
-        <h2 class="titulo-sucursales">SUCURSALES</h2>
-        <div class="sucursales-maps">
-            <div class="indiv-sucursal">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1146.1912662020666!2d-58.92050917142861!3d-34.43317439830645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9d3525eae775%3A0x14aec9ca3ccdd7c9!2sParaguay%201730%2C%20B1630%20Pilar%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1730422385093!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <h3>Sucursal 1</h3>
-            </div>
-            <div class="indiv-sucursal">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1145.973504301737!2d-58.908628371447534!3d-34.44904929830611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9cd83934a2d7%3A0xafe12b654ad0e76f!2sParaguay%20328%2C%20B1630BJB%20Pilar%20Centro%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1730422575376!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <h3>Sucursal 2</h3>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- ********* Seccion de footer ******** -->
     <footer id="piedepagina">
         <p class="contac">Contacto</p>

@@ -186,7 +186,7 @@ nav.abajo .main-name:hover {
 
 /**********************************************/
 /* **** Zona central de la primer pagina **** */ 
-#zona1 {
+#zona1{
     background: url(../img/fondo2.jpg) no-repeat;   /* Es para que sea SOLO una imagen */
     background-size: cover;
     background-position: center center;
@@ -196,111 +196,112 @@ nav.abajo .main-name:hover {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;   /* lo puse, porque necesitaba el boton debajo */
     justify-content: center;
-    /* align-items: center; */
-
-    overflow-x: hidden;
-    /* border: 2px solid red; */
-}
-
-#container-resenas {
-    width: 100%;
-
-    max-height: 88%;
-    min-height: 26%;
-
-    margin-top: 120px;
-    text-align: center;
-    padding: 10px;
-
-    /* border: 2px solid blue; */
-}
-
-#container-resenas h2 {
-    color: #ff4081;
-    font-size: clamp(1.4rem, 2vw + 1rem, 2rem);
-    margin-bottom: 20px;
-    text-shadow: 2px 2px #ffffff;
-}
-
-.container-cards {
-    /* min-height: 100vh; */
-    width: 80%;
-    margin: 0 auto; 
-
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    grid-auto-rows: 200px;
-    gap: 1.4rem;
-
-    /* border: 2px solid green; */
-}
-
-.card-resenas {
-    display: grid;
-    grid-template-rows: 50% 50%;
-    border-radius: 8px;
-    box-shadow: 5px 5px 10px #4f9b89;
-    background-color: #f0f0f0;
-    width: 100%;
-    height: 100%;
-    /* object-fit: cover; */
-    padding: 16px;
-    overflow: hidden;
-
-    transition: 0.5s;
-}
-
-.card-resenas:hover {
-    background-color: #faebd7;
-    box-shadow: 6px 6px 10px #b67b7b;
-    scale: 1.02;
-    transition: 0.5s;
-}
-
-.card-title-resenas {
-    grid-row: 1/2; /* Título ocupa la primer fila */
-    padding: 0 16px;
-    display: flex;
     align-items: center;
+    overflow-x: hidden;
 }
 
-.card-title-resenas h3 {
-    font-size: clamp(1rem, 2vw + 0.25rem, 1.5rem);
-    margin: 0 auto;
+/* **************************** */
+.form h1 {
+    text-align: center;
+    font-weight: 700;
+    color: #020492;
 }
 
-.card-description-resenas {
-    grid-row: 2/3; /* Descripción ocupa la tercera fila */
-    padding: 0 16px;
-    font-style: italic;
+form {
+    background-color: rgba(245, 233, 218, 0.8);
+    padding: 40px 0;
+    box-shadow: 0 0 6px rgba(131, 130, 130, 0.8);
+    border-radius: 10px;
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo {
+    position: relative;
+    margin: 45px;
+}
+
+input {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    color: #858183;;
+    border-bottom: 1px solid #49454567;
+}
+
+input:focus {
+    outline: none;
+    color: #5e5b5d;
+}
+
+label {
+    color: #49454567;
     
-    overflow-y: scroll;
-   
-    display: flex;
-    align-items: flex-start;
-    text-align: justify;
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    pointer-events: none;
+    transition: 0.5s ease-in-out all;
 }
 
-.card-description-resenas p {
-    color: #666;
-    font-size: clamp(0.8em, 2vw, 1.125em);
-    margin: 0 auto;
-
-    line-height: normal;
+input:focus~label,
+input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: #2196f3;
 }
 
-/* Boton flecha inicio */
-.flecha-arriba{
-    bottom: 4px;
-    right: 4px;
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
 
-    position: fixed;
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #b06ab3, #4568dc);
+    transition: 0.3s ease width;
+    left: 0;
+}
 
-    height: 40px; 
-    width: 40px;
-    cursor: pointer;
+input:focus~.barra::before {
+    width: 100%;
+}   
+
+button {
+    font-family: "Roboto";
+    background: linear-gradient(to right, #17b5d4, #06748a, #0d94af, #015566);
+    border: none;
+    display: block;
+
+    width: 80%;
+    margin: 10px auto;
+    color:rgba(44, 62, 80, 0.9);
+    height: 40px;
+    font-size: 16px;
+    
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+button:hover {
+    color: #ffffff;
+    background: linear-gradient(to right, #015566, #0d94af, #06748a, #17b5d4);
 }
 
 
@@ -396,6 +397,8 @@ footer .copyright {
         text-align: center;
         transition: all .5s;
         overflow-y: auto;
+
+        display: block; /* agregue */
     }
 
     nav ul li {
@@ -416,47 +419,33 @@ footer .copyright {
     #check:checked ~ ul {
         left:0;
     }
-
-    .presentacion h1 {
-        font-size: 4rem;
-    }
 }
 
 
 /*************************************/
 /* ***** Media Query con 1090px ***** */
 @media (max-width: 1090px) {
+   /*  nav ul li a {
+        font-size: 1rem;
+        padding: 0 8px;
+    } */
+
     .main-name {
         font-size: 1.4rem;
     } 
-}
 
-
-/*************************************/
-/* ***** Media Query con 952px ***** */
-@media (max-width: 952px) {
-
-}
-
-
-
-/*************************************/
-/* ***** Media Query con 858px ***** */
-/*************************************/
-@media (max-width: 858px) {
-    .presentacion h1 {
-        font-size: 4rem;
+    .sucursales-maps {
+        width: 90%;
     }
 }
-
 
 
 /*************************************/
 /* ***** Media Query con 542px ***** */
 /*************************************/
 @media (max-width: 542px) {
-    .presentacion h1 {
-        font-size: 3rem;
+    form {
+        width: 80%;
     }
 }
 

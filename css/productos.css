@@ -62,12 +62,6 @@ nav.abajo {
     animation: rotate-logo 6s ease-in-out infinite;
 }
 
-/* @keyframes rotate-logo {
-    from {
-        transform: rotateY(360deg);
-    }
-} */
-
 @keyframes rotate-logo {
     0% {
         transform: rotateY(360deg);
@@ -82,7 +76,7 @@ nav.abajo {
 
 .main-name {
     color:#21d5fa;
-    font-weight: bold;
+    font-weight: bold; /* negrita */
     text-transform: uppercase;
     font-size: 1.6rem;
 
@@ -96,23 +90,30 @@ nav.abajo {
 
 nav ul {
     float: right;
-    margin: 3px 20px 4px 4px;
+
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
     display: inline-block;
     line-height: 70px;
-    margin: 6px 5px;
+    margin: 6px;
 }
 
 nav ul li a {
     position: relative;
     color: #21d5fa;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     border-radius: 5px;
     text-transform: uppercase;
     padding: 0 12px;
+}
+
+.fa-home {
+    font-size: 1.125rem;
+    color: #020492;
 }
 
 /* nuevo */
@@ -133,6 +134,22 @@ li a:hover {
 
 li a:hover:after {
     width: 100%;
+}
+
+.container-user {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    /* float: right; */
+    margin: 6px 20px;
+    padding: 6px;
+}
+
+.fa-user,
+.fa-cart-shopping {
+    font-size: 1.125rem;
+    color: #fff100;
+    cursor: pointer;
 }
 
 .checkbtn {
@@ -169,7 +186,7 @@ nav.abajo .main-name:hover {
 
 /**********************************************/
 /* **** Zona central de la primer pagina **** */ 
-#zona1{
+#zona1 {
     background: url(../img/fondo2.jpg) no-repeat;   /* Es para que sea SOLO una imagen */
     background-size: cover;
     background-position: center center;
