@@ -68,11 +68,18 @@
             </div>
         </div>
 
+        <section class="texto-zoom">
+            <p class="tracking">CONTROL STOCK</p>
+        </section>
+
+
+
         <!-- Musica de fondo. Lo podría haber puesto en cualquier lugar. Lo puse SIN la opción de mostrar los controles -->
         <audio id="background-music" src="/audio/musica-fondo.mp3" autoplay loop>
             Tu navegador no soporta el elemento de audio.
         </audio>
 
+        <div class="btn-sino active" id="volume-btn"></div>
     </section>
 
     <!-- JavaScript para establecer el volumen inicial -->
@@ -80,6 +87,21 @@
         document.addEventListener('DOMContentLoaded', function () {
             var audio = document.getElementById('background-music');
             audio.volume = 0.5; // Establecí el volumen al 50%
+
+
+
+        var toggleButton = document.getElementById('volume-btn');
+        var isMuted = false;
+        
+        toggleButton.addEventListener('click', function () {
+            isMuted = !isMuted; // Cambiar el estado de mute
+            audio.volume = isMuted ? 0 : 0.5; // Silenciar o restaurar el volumen
+
+            // Cambiar el estado del botón
+            toggleButton.classList.toggle('active', !isMuted);
+        });
+
+
         });
     </script>    
 

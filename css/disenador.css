@@ -306,6 +306,86 @@ div.contanier-nombres {
 }
 
 
+/* ********************************** */
+/* ********** Texto con Zoom ******** */
+.tracking {
+    animation: tracking-1 5s 1s infinite;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000000;
+    text-shadow: 1px 1px 10px #ffffff,
+                 1px 1px 20px #ffffff,
+                 1px 1px 30px #f5deb3,
+                 1px 1px 40px #f5deb3;
+
+}
+
+@keyframes tracking-1 {
+    0% {
+      letter-spacing: 1em;
+      transform: translateZ(400px) translateY(170px);
+      opacity: 0;
+      color: #ab03cc;
+    }
+
+    40% {
+      opacity: 0.6;
+    }
+
+    100% {
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+      color: orange;
+    }
+}
+
+
+
+/* ************************************ */
+/* ******** Boton volumen si, no ****** */
+.btn-sino {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #fa0202;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-sino:before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.btn-sino.active {
+    background-color: #4caf50;
+}
+
+.btn-sino.active:before {
+    transform: translateX(30px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**************************************/
 /* ***** Media Query con 1368px ***** */
 /* ********************************** */
