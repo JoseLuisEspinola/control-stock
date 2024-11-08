@@ -324,9 +324,9 @@ div.contanier-nombres {
 @keyframes tracking-1 {
     0% {
       letter-spacing: 1em;
-      transform: translateZ(400px) translateY(170px);
+      transform: translateZ(400px) translateY(130px);
       opacity: 0;
-      color: #ab03cc;
+      color: #8a03a5;
     }
 
     40% {
@@ -371,19 +371,6 @@ div.contanier-nombres {
 .btn-sino.active:before {
     transform: translateX(30px);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /**************************************/
@@ -449,6 +436,43 @@ div.contanier-nombres {
 }
 
 
+/*************************************/
+/* ***** Media Query con 866px ***** */
+/* ********************************* */
+@media (max-width: 866px) {
+    .tracking {
+        animation: tracking-1 15s 1s infinite;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 400;
+        color: orange;
+        text-shadow: 1px 1px 10px #ffffff,
+                     1px 1px 20px #ffffff,
+                     1px 1px 30px #f5deb3,
+                     1px 1px 40px #f5deb3;
+
+    }
+
+    @keyframes tracking-1 {
+        0% {
+            letter-spacing: 0.8em;
+            transform: translateZ(400px) translateY(100px);
+            opacity: 0;
+            color: #8a03a5;
+        }
+
+        40% {
+            opacity: 0.6;
+        }
+
+        100% {
+            transform: translateZ(0) translateY(0);
+            opacity: 1;
+            color: orange;
+        }
+    }
+}
+
 
 /*************************************/
 /* ***** Media Query con 600px ***** */
@@ -464,6 +488,48 @@ div.contanier-nombres {
         font-size: 3.5rem;
     }    
 }
+
+
+/*************************************/
+/* ***** Media Query con 570px ***** */
+/* ********************************* */
+@media (max-width: 570px) {
+    .tracking {
+        animation: tracking-1 5s 1s infinite;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: orange;
+        text-shadow: 1px 1px 10px #ffffff,
+                     1px 1px 20px #ffffff,
+                     1px 1px 30px #f5deb3,
+                     1px 1px 40px #f5deb3;
+
+    }
+
+    @keyframes tracking-1 {
+        0% {
+            letter-spacing: 0.4em;
+            transform: translateZ(400px) translateY(100px);
+            opacity: 0;
+            color: #8a03a5;
+        }
+
+        40% {
+            opacity: 0.6;
+        }
+
+        100% {
+            transform: translateZ(0) translateY(0);
+            opacity: 1;
+            color: orange;
+        }
+    }
+}
+
+
+
+
 
 
 
